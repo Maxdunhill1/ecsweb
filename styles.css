@@ -161,3 +161,100 @@ body{
     font-family: "Helvetica Neu Bold";
     src: url("/helveticaneue/Helvetica Neu Bold.ttf") format("ttf"),
    }
+
+   .card {
+    height: 162px;
+    width: 200px;
+    background-image: url(123.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    animation: holoCard 15s ease infinite;
+  }
+  .card > span {
+    position: relative;
+    top: 45%;
+  }
+  .card:before, .card:after {
+    content: "";
+    position: absolute;
+    border-radius:15px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(115deg, transparent 0%, #00e7ff 30%, #ff00e7 70%, transparent 100%);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    mix-blend-mode: color-dodge;
+    opacity: 0.2;
+    z-index: 1;
+    animation: holoGradient 15s ease infinite;
+  }
+  .card:after {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+    background-position: center;
+    background-size: 180%;
+    mix-blend-mode: color-dodge;
+    opacity: 1;
+    z-index: 2;
+    animation: holoSparkle 15s ease infinite;
+  }
+  .card.active:before {
+    opacity: 1;
+    animation: none;
+    transition: none;
+    background-image: linear-gradient(115deg, transparent 0%, transparent 25%, rgba(0, 231, 255, 0.7) 45%, rgba(255, 0, 231, 0.7) 55%, transparent 70%, transparent 100%);
+  }
+  .card.active:before, .card.active:after {
+    animation: none;
+  }
+
+  .operator {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 45px;
+  }
+  @keyframes holoSparkle {
+    0%, 5% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+  @keyframes holoGradient {
+    0%, 100% {
+      opacity: 0;
+      background-position: 0% 0%;
+    }
+    8% {
+      opacity: 0;
+    }
+    10% {
+      background-position: 0% 0%;
+    }
+    19% {
+      background-position: 100% 100%;
+      opacity: 0.5;
+    }
+    35% {
+      background-position: 100% 100%;
+    }
+    55% {
+      background-position: 0% 0%;
+      opacity: 0.3;
+    }
+    75% {
+      opacity: 0;
+    }
+  }
