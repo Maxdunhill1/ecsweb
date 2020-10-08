@@ -1,4 +1,4 @@
-body{
+ body{
     background: rgba(55, 57, 63);
     padding-top: 100px;
     padding-bottom: 100px;
@@ -112,6 +112,10 @@ body{
     height: 560px;
     padding: 30px;
     background:  rgb(47,49,54);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 #zd{
@@ -195,17 +199,9 @@ body{
     mix-blend-mode: color-dodge;
     opacity: 0.2;
     z-index: 1;
-    animation: holoGradient 15s ease infinite;
+    animation: holoGradient 10s ease infinite;
   }
-  .card:after {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
-    background-position: center;
-    background-size: 180%;
-    mix-blend-mode: color-dodge;
-    opacity: 1;
-    z-index: 2;
-    animation: holoSparkle 15s ease infinite;
-  }
+  
   .card.active:before {
     opacity: 1;
     animation: none;
@@ -258,3 +254,19 @@ body{
       opacity: 0;
     }
   }
+
+  .link{
+      color: rgba(72,113,214,1);
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      margin-top: 5px;
+  }
+  .link:hover{
+    text-decoration: underline;
+}
+
+#mathsvg{
+    height: 300px;
+    margin-bottom: 80px;
+}
