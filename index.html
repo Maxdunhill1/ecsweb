@@ -12,7 +12,7 @@
 <body>
     <div id="flow">
         <section id="section0">
-            <div class="petitb" id="petitbg" onclick="window.location = 'http://google.com';">
+            <div class="petitb" id="petitbg" onclick="window.location = 'EDT.html';">
                 <p>Emploi du temps ECS2 ></p>
             </div>
             <div class="petitb" id="petitbd" onclick="window.location = 'DS.html';">
@@ -55,6 +55,7 @@
                 </div>
             </div>
         </section>
+        <span class="gradient">Powered by<br> Clément HORESH</span>
     </div>
     <script>var $cards = $(".card");
         var $style = $(".hover");
@@ -75,6 +76,17 @@
           $cards.removeClass("active");
         });
     </script>
-
+    <script>var cw=$(window).width();
+        var ch=$(window).height();
+        $(document).mousemove(function(d){
+           var a=Math.round(100/cw*d.pageX),g3=a-100,g2=a-60,g1=a-20,d1=a+20,d2=a+60,d3=a+100;
+           var b=85 ;
+              $(".gradient").css({background:"-moz-linear-gradient(left, hsl(139,100%,"+b+"%) "+g3+"%, hsl(47,100%,"+b+"%) "+g2+"%, hsl(16,100%,"+b+"%) "+g1+"%, hsl(267,100%,88%) "+d1+"%, hsl(204,100%,"+b+"%) "+d2+"%, hsl(126,100%,"+b+"%) "+d3+"%)"}),
+              $(".gradient").css({background:"-webkit-linear-gradient(left, hsl(139,100%,"+b+"%) "+g3+"%, hsl(47,100%,"+b+"%) "+g2+"%, hsl(16,100%,"+b+"%) "+g1+"%, hsl(267,100%,88%) "+d1+"%, hsl(204,100%,"+b+"%) "+d2+"%, hsl(126,100%,"+b+"%) "+d3+"%)"}),
+              $(".gradient").css({background:"linear-gradient(to right, hsl(139,100%,"+b+"%) "+g3+"%, hsl(47,100%,"+b+"%) "+g2+"%, hsl(16,100%,"+b+"%) "+g1+"%, hsl(267,100%,88%) "+d1+"%, hsl(204,100%,"+b+"%) "+d2+"%, hsl(126,100%,"+b+"%) "+d3+"%)"}),
+              $(".gradient").css({color:"transparent"}),
+              $(".gradient").css({'background-clip':"text"}),
+              $(".gradient").css({'-webkit-background-clip':"text"})
+        });</script>
 </body>
 </html>
