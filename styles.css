@@ -109,13 +109,16 @@ body{
 
 #zu{
     margin-right: 15px;
-    height: 560px;
+    height: 530px;
     padding: 30px;
+    padding-bottom: 60px;
     background:  rgb(47,49,54);
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
     text-align: center;
+    background-image: url("math.png");
+    background-size: cover;
 }
 
 #zd{
@@ -157,7 +160,6 @@ body{
 
 #env{
     object-fit: cover;
-    width: 150px;
     margin: 0 auto;
 }
 
@@ -167,8 +169,8 @@ body{
    }
 
    .card {
-    height: 162px;
-    width: 200px;
+    height: 110px;
+    width: 140px;
     background-image: url(123.png);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -187,7 +189,7 @@ body{
   .card:before, .card:after {
     content: "";
     position: absolute;
-    border-radius:15px;
+    border-radius:7.5px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -323,4 +325,12 @@ background: linear-gradient(to right, hsl(139,100%,85%) 0%, hsl(47,100%,85%) 20%
   background-clip: text;
   font-size: 15px;
 
+}
+
+#bas{
+  text-align: center;
+  color: #adadad;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  line-height: 0px;
 }
